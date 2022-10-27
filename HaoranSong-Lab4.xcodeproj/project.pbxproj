@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940294CB290456830079112E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940294CA290456830079112E /* LoadingView.swift */; };
+		940294CD29047DF90079112E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940294CC29047DF90079112E /* DetailViewController.swift */; };
+		940294D32905D3110079112E /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940294D22905D3110079112E /* MyViewController.swift */; };
+		945A55DA2906D40900216FFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A55D92906D40900216FFD /* LoginViewController.swift */; };
 		94EC7CB029023CD10029502D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC7CAF29023CD10029502D /* AppDelegate.swift */; };
 		94EC7CB229023CD10029502D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC7CB129023CD10029502D /* SceneDelegate.swift */; };
 		94EC7CB429023CD10029502D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EC7CB329023CD10029502D /* ViewController.swift */; };
 		94EC7CB729023CD10029502D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC7CB529023CD10029502D /* Main.storyboard */; };
 		94EC7CB929023CD10029502D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EC7CB829023CD10029502D /* Assets.xcassets */; };
 		94EC7CBC29023CD10029502D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EC7CBA29023CD10029502D /* LaunchScreen.storyboard */; };
+		94FB48A72909D942008E64EB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB48A62909D942008E64EB /* ReviewViewController.swift */; };
+		94FB48A92909E52A008E64EB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB48A82909E52A008E64EB /* Database.swift */; };
+		94FB48AB2909E546008E64EB /* DatabaseCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB48AA2909E546008E64EB /* DatabaseCommand.swift */; };
+		94FB48AD2909EBEC008E64EB /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB48AC2909EBEC008E64EB /* Review.swift */; };
+		94FB48AF290A1A70008E64EB /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB48AE290A1A70008E64EB /* AddReviewViewController.swift */; };
+		94FB48B1290B4052008E64EB /* LikedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB48B0290B4052008E64EB /* LikedMovie.swift */; };
+		DDD156CF76A18B30604687D7 /* Pods_HaoranSong_Lab4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36958D5D7132132D7F49A00F /* Pods_HaoranSong_Lab4.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36958D5D7132132D7F49A00F /* Pods_HaoranSong_Lab4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaoranSong_Lab4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87199633249AE90076CF6B74 /* Pods-HaoranSong-Lab4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaoranSong-Lab4.release.xcconfig"; path = "Target Support Files/Pods-HaoranSong-Lab4/Pods-HaoranSong-Lab4.release.xcconfig"; sourceTree = "<group>"; };
+		8F292FB9DF55C17183CD7403 /* Pods-HaoranSong-Lab4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaoranSong-Lab4.debug.xcconfig"; path = "Target Support Files/Pods-HaoranSong-Lab4/Pods-HaoranSong-Lab4.debug.xcconfig"; sourceTree = "<group>"; };
+		940294CA290456830079112E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		940294CC29047DF90079112E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		940294D22905D3110079112E /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		945A55D92906D40900216FFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		94EC7CAC29023CD10029502D /* HaoranSong-Lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HaoranSong-Lab4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EC7CAF29023CD10029502D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EC7CB129023CD10029502D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +42,12 @@
 		94EC7CB829023CD10029502D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94EC7CBB29023CD10029502D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EC7CBD29023CD10029502D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94FB48A62909D942008E64EB /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		94FB48A82909E52A008E64EB /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		94FB48AA2909E546008E64EB /* DatabaseCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCommand.swift; sourceTree = "<group>"; };
+		94FB48AC2909EBEC008E64EB /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		94FB48AE290A1A70008E64EB /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		94FB48B0290B4052008E64EB /* LikedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD156CF76A18B30604687D7 /* Pods_HaoranSong_Lab4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F830177734E0DD9CE7DD839 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F292FB9DF55C17183CD7403 /* Pods-HaoranSong-Lab4.debug.xcconfig */,
+				87199633249AE90076CF6B74 /* Pods-HaoranSong-Lab4.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7D44FC444BC2679144E27F53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36958D5D7132132D7F49A00F /* Pods_HaoranSong_Lab4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		94EC7CA329023CD10029502D = {
 			isa = PBXGroup;
 			children = (
 				94EC7CAE29023CD10029502D /* HaoranSong-Lab4 */,
 				94EC7CAD29023CD10029502D /* Products */,
+				0F830177734E0DD9CE7DD839 /* Pods */,
+				7D44FC444BC2679144E27F53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +103,20 @@
 				94EC7CAF29023CD10029502D /* AppDelegate.swift */,
 				94EC7CB129023CD10029502D /* SceneDelegate.swift */,
 				94EC7CB329023CD10029502D /* ViewController.swift */,
+				940294CC29047DF90079112E /* DetailViewController.swift */,
+				940294D22905D3110079112E /* MyViewController.swift */,
+				945A55D92906D40900216FFD /* LoginViewController.swift */,
+				94FB48A62909D942008E64EB /* ReviewViewController.swift */,
+				94FB48AE290A1A70008E64EB /* AddReviewViewController.swift */,
 				94EC7CB529023CD10029502D /* Main.storyboard */,
 				94EC7CB829023CD10029502D /* Assets.xcassets */,
 				94EC7CBA29023CD10029502D /* LaunchScreen.storyboard */,
 				94EC7CBD29023CD10029502D /* Info.plist */,
+				940294CA290456830079112E /* LoadingView.swift */,
+				94FB48A82909E52A008E64EB /* Database.swift */,
+				94FB48AA2909E546008E64EB /* DatabaseCommand.swift */,
+				94FB48AC2909EBEC008E64EB /* Review.swift */,
+				94FB48B0290B4052008E64EB /* LikedMovie.swift */,
 			);
 			path = "HaoranSong-Lab4";
 			sourceTree = "<group>";
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94EC7CC029023CD10029502D /* Build configuration list for PBXNativeTarget "HaoranSong-Lab4" */;
 			buildPhases = (
+				C95BBC51039CFE1219BC2EA3 /* [CP] Check Pods Manifest.lock */,
 				94EC7CA829023CD10029502D /* Sources */,
 				94EC7CA929023CD10029502D /* Frameworks */,
 				94EC7CAA29023CD10029502D /* Resources */,
+				A82F352F9DB6267688D80325 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +189,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A82F352F9DB6267688D80325 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HaoranSong-Lab4/Pods-HaoranSong-Lab4-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HaoranSong-Lab4/Pods-HaoranSong-Lab4-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HaoranSong-Lab4/Pods-HaoranSong-Lab4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C95BBC51039CFE1219BC2EA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HaoranSong-Lab4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94EC7CA829023CD10029502D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94FB48AB2909E546008E64EB /* DatabaseCommand.swift in Sources */,
 				94EC7CB429023CD10029502D /* ViewController.swift in Sources */,
+				940294CB290456830079112E /* LoadingView.swift in Sources */,
+				940294CD29047DF90079112E /* DetailViewController.swift in Sources */,
+				940294D32905D3110079112E /* MyViewController.swift in Sources */,
+				945A55DA2906D40900216FFD /* LoginViewController.swift in Sources */,
+				94FB48AF290A1A70008E64EB /* AddReviewViewController.swift in Sources */,
+				94FB48AD2909EBEC008E64EB /* Review.swift in Sources */,
 				94EC7CB029023CD10029502D /* AppDelegate.swift in Sources */,
+				94FB48A92909E52A008E64EB /* Database.swift in Sources */,
+				94FB48A72909D942008E64EB /* ReviewViewController.swift in Sources */,
 				94EC7CB229023CD10029502D /* SceneDelegate.swift in Sources */,
+				94FB48B1290B4052008E64EB /* LikedMovie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +390,7 @@
 		};
 		94EC7CC129023CD10029502D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F292FB9DF55C17183CD7403 /* Pods-HaoranSong-Lab4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +419,7 @@
 		};
 		94EC7CC229023CD10029502D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87199633249AE90076CF6B74 /* Pods-HaoranSong-Lab4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
