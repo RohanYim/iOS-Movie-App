@@ -46,7 +46,7 @@ class ViewController: UIViewController{
     var theImageCache : [UIImage] = []
     var theGenre : GenreBackData?
     var genreDict: [Int: String] = [:]
-    let apiKey = "d766a2eea4ccdbb5593aea0eafa7fb55"
+    let apiKey = ""
     let defaults = UserDefaults.standard
     
     @IBOutlet weak var appSubtitle: UILabel!

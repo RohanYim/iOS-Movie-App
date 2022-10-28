@@ -37,7 +37,7 @@ class MyViewController: UIViewController {
     @IBOutlet weak var connectBtn: UIButton!
     @IBAction func connectBtnClicked(_ sender: Any) {
         var url:URL?
-        url = URL(string:"https://api.themoviedb.org/3/authentication/token/new?api_key=d766a2eea4ccdbb5593aea0eafa7fb55")
+        url = URL(string:"https://api.themoviedb.org/3/authentication/token/new?api_key=")
     
         let data = try! Data(contentsOf: url!)
         tokenData = try! JSONDecoder().decode(theToken.self,from:data)

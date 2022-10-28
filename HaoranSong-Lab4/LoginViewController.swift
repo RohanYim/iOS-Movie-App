@@ -11,7 +11,7 @@ import WebKit
 class LoginViewController: UIViewController {
     var webView: WKWebView!
     var url: String = ""
-    var apiKey = "d766a2eea4ccdbb5593aea0eafa7fb55"
+    var apiKey = ""
     
     struct theSession: Codable {
         var success: Bool
