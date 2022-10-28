@@ -115,10 +115,16 @@ class ViewController: UIViewController{
     
     func getDataFromTMDB(query: String){
         var url:URL?
-        if(query.count==0){
+        
+        var myQuery = query.removeSpecialCharacters().condensedWhitespace
+        myQuery = myQuery.unicodeScalars
+            .filter { !$0.properties.isEmojiPresentation }
+            .reduce("") { $0 + String($1) }
+        
+        if(myQuery.count==0){
             url = URL(string:"https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)&language=en-US&page=1")
         }else{
-            url = URL(string:"https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&language=en-US&query=\(query)")
+            url = URL(string:"https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&language=en-US&query=\(myQuery)")
         }
         
         let data = try! Data(contentsOf: url!)
@@ -305,5 +311,17 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate,U
         return config
     }
     
+}
+// Reference:  https://stackoverflow.com/questions/56984247/swift-how-to-remove-special-character-without-remove-emoji-from-string
+extension String {
+    var condensedWhitespace: String {
+        let components = self.components(separatedBy: NSCharacterSet.whitespacesAndNewlines)
+        return components.filter { !$0.isEmpty }.joined(separator: " ")
+    }
+
+    func removeSpecialCharacters() -> String {
+        let okayChars = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890 ")
+        return String(self.unicodeScalars.filter { okayChars.contains($0) || $0.properties.isEmoji })
+    }
 }
 

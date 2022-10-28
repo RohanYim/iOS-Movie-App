@@ -25,13 +25,20 @@ class LoginViewController: UIViewController {
         var username: String
         var id: Int
     }
+    
+    struct userWithoutAvatar: Codable {
+        var username: String
+        var id: Int
+    }
+    
     struct theAvatar: Codable {
-        var tmdb: theTmdb
+        var tmdb: theTmdb?
     }
     struct theTmdb: Codable {
         var avatar_path: String = ""
     }
     var userData: theUser?
+    var userWithoutAvatarData: userWithoutAvatar?
     var userAvatar: String = ""
     var userName: String = ""
     var userImage: UIImage?
@@ -93,29 +100,39 @@ extension LoginViewController: WKUIDelegate, WKNavigationDelegate {
             let userUrl = URL(string:"https://api.themoviedb.org/3/account?api_key=\(apiKey)&session_id=\(session)")
 
             let uData = try! Data(contentsOf: userUrl!)
-            userData = try! JSONDecoder().decode(theUser.self,from:uData)
-            userAvatar = (userData!.avatar?.tmdb.avatar_path)!
-            userName = userData?.username ?? ""
-            userId = userData?.id
-
-            let image_path = "https://image.tmdb.org/t/p/original/\(userAvatar)"
-
-            if(userAvatar==""){
-                userImage = UIImage(named: "empty")
-            }else{
-                let url = URL(string: image_path)
-                let data = try? Data(contentsOf: url!)
-                userImage = UIImage(data: data!)
-            }
-
-            let imageData = userImage!.jpegData(compressionQuality: 1)
-            let imageBase64String = imageData?.base64EncodedString()
-
             let defaults = UserDefaults.standard
-            defaults.set(userName, forKey: "myName")
-            defaults.set(imageBase64String, forKey: "myAvatar")
-            defaults.set(userId, forKey: "myId")
-            
+            do{
+                userData = try JSONDecoder().decode(theUser.self,from:uData)
+                userAvatar = (userData!.avatar?.tmdb?.avatar_path) ?? ""
+                userName = userData?.username ?? ""
+                userId = userData?.id
+
+                let image_path = "https://image.tmdb.org/t/p/original/\(userAvatar)"
+
+                if(userAvatar==""){
+                    userImage = UIImage(named: "empty")
+                }else{
+                    let url = URL(string: image_path)
+                    let data = try? Data(contentsOf: url!)
+                    userImage = UIImage(data: data!)
+                }
+
+                let imageData = userImage!.jpegData(compressionQuality: 1)
+                let imageBase64String = imageData?.base64EncodedString()
+
+                defaults.set(userName, forKey: "myName")
+                defaults.set(imageBase64String, forKey: "myAvatar")
+                defaults.set(userId, forKey: "myId")
+            } catch{
+                userWithoutAvatarData = try! JSONDecoder().decode(userWithoutAvatar.self,from:uData)
+                userName = userWithoutAvatarData?.username ?? ""
+                userId = userWithoutAvatarData?.id
+                defaults.removeObject(forKey: "myAvatar")
+                defaults.set(userName, forKey: "myName")
+                defaults.set(userId, forKey: "myId")
+                
+            }
+     
             let favoriteUrl = URL(string:"https://api.themoviedb.org/3/account/%7Baccount_id%7D/favorite?api_key=\(apiKey)&session_id=\(session)")
             guard let requestUrl = favoriteUrl else { fatalError() }
             for i in UserDefaults.standard.dictionaryRepresentation().keys{

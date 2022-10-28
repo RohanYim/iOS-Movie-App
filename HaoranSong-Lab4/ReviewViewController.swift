@@ -77,7 +77,12 @@ extension ReviewViewController: UITableViewDelegate,UITableViewDataSource {
         cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         cell.detailTextLabel?.textColor = UIColor.black
         let newImageData = Data(base64Encoded: reviewArray[indexPath.item].userAvar)
-        let newImage = UIImage(data: newImageData!)
+        
+        var newImage = UIImage(data: newImageData!)
+        if(newImageData?.count==0){
+            newImage = UIImage(named: "black")
+        }
+
         cell.imageView?.image = newImage
         cell.isUserInteractionEnabled = false
         return cell

@@ -29,6 +29,7 @@ class MyViewController: UIViewController {
     let defaults = UserDefaults.standard
     var myUserName = "Guest"
     var myAvatar: UIImage?
+    var apiKey = ""
     
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userAvatar: UIImageView!
@@ -37,7 +38,7 @@ class MyViewController: UIViewController {
     @IBOutlet weak var connectBtn: UIButton!
     @IBAction func connectBtnClicked(_ sender: Any) {
         var url:URL?
-        url = URL(string:"https://api.themoviedb.org/3/authentication/token/new?api_key=")
+        url = URL(string:"https://api.themoviedb.org/3/authentication/token/new?api_key=\(apiKey)")
     
         let data = try! Data(contentsOf: url!)
         tokenData = try! JSONDecoder().decode(theToken.self,from:data)

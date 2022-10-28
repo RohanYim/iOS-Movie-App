@@ -59,9 +59,9 @@ class AddReviewViewController: UIViewController {
                 let movieId = movieId
                 let movieName = movieTitle
                 let review = writeReview.text
-                let userAvar = UserDefaults.standard.string(forKey: "myAvatar")
+                let userAvar = UserDefaults.standard.string(forKey: "myAvatar") ?? ""
                 
-                let myReview = Review(userName: userName!, userAvar: userAvar!, movieId: movieId!, movieName: movieName, review: review!)
+                let myReview = Review(userName: userName!, userAvar: userAvar, movieId: movieId!, movieName: movieName, review: review!)
                 
                 let addToDatabase = DatabaseCommand.insertRow(myReview)
                 

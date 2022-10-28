@@ -40,6 +40,7 @@ Reference:
 1. https://github.com/HanHan120766/LoadingDemo/tree/master (LoadingView)
 2. https://stackoverflow.com/questions/16100378/is-there-any-controls-available-for-star-rating (Stars rating)
 3. https://www.youtube.com/watch?v=s32FuDBGBf8 (SQLite3)
+4. https://stackoverflow.com/questions/56984247/swift-how-to-remove-special-character-without-remove-emoji-from-string (Filter search query)
 
 
 
