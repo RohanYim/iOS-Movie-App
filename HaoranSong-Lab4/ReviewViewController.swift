@@ -67,8 +67,6 @@ extension ReviewViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-//        cell.layer.borderColor = UIColor(red: 0.00, green: 0.42, blue: 0.46, alpha: 1.00).cgColor
-//        cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 4
         cell.clipsToBounds = true
         cell.textLabel!.text = reviewArray[indexPath.item].userName
@@ -92,46 +90,5 @@ extension ReviewViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
     }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detailedVC = DetailViewController()
-//        detailedVC.imageName = likedList[indexPath.item-1].title
-//        let newImageData = Data(base64Encoded: likedList[indexPath.item-1].poster)
-//        let newImage = UIImage(data: newImageData!)
-//        detailedVC.image = newImage!
-//        detailedVC.subtitle = likedList[indexPath.item-1].subtitle!
-//        detailedVC.overview = likedList[indexPath.item-1].overview
-//        detailedVC.rating = likedList[indexPath.item-1].vote_average
-//        detailedVC.id = likedList[indexPath.item-1].id
-//        navigationController!.pushViewController(detailedVC, animated: true)
-//    }
-//
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//
-//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-//        if(indexPath.item==0){
-//            return UITableViewCell.EditingStyle.none
-//        }else{
-//            return UITableViewCell.EditingStyle.delete
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete{
-//            if tableView.numberOfRows(inSection: indexPath.section) == 1{}else{
-//                if(indexPath.item==0){}else{
-//                    let key = "Movie_\(likedList[indexPath.item-1].id)"
-//                    likedList.remove(at: indexPath.item-1)
-//                    tableView.deleteRows(at: [indexPath], with: .fade)
-//                    defaults.removeObject(forKey: key)
-//                }
-//
-//            }
-//
-//        }
-//    }
-
 
 }
