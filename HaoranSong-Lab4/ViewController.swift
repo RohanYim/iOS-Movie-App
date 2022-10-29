@@ -126,10 +126,11 @@ class ViewController: UIViewController{
         }else{
             url = URL(string:"https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&language=en-US&query=\(myQuery)")
         }
-        
-        let data = try! Data(contentsOf: url!)
-        
-        theData = try! JSONDecoder().decode(APIResults.self,from:data)
+        do{
+            let data = try Data(contentsOf: url!)
+            theData = try JSONDecoder().decode(APIResults.self,from:data)
+        }catch{}
+
     }
     
     func cacheImages(){
@@ -139,9 +140,14 @@ class ViewController: UIViewController{
                 theImageCache.append(UIImage(named: "empty")!)
             }else{
                 let url = URL(string: "https://image.tmdb.org/t/p/original\( item.poster_path ?? "0")")
-                let data = try? Data(contentsOf: url!)
-                let image = UIImage(data: data!)
-                theImageCache.append(image!)
+                do{
+                    let data = try Data(contentsOf: url!)
+                    let image = UIImage(data: data)
+                    theImageCache.append(image!)
+                }catch{
+                    theImageCache = []
+                }
+
             }
         }
     }
@@ -256,8 +262,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate,U
         for i in listGenres!{
             genresString += genreDict[i]! + ", "
         }
-        genresString.remove(at: genresString.index(before: genresString.endIndex))
-        genresString.remove(at: genresString.index(before: genresString.endIndex))
+        if(genresString.count>0){
+            genresString.remove(at: genresString.index(before: genresString.endIndex))
+            genresString.remove(at: genresString.index(before: genresString.endIndex))
+        }
         let releaseDate = theData?.results[indexPath.item].release_date
         let passInfo = releaseDate! + "\n" + genresString
         detailedVC.subtitle = passInfo
